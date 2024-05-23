@@ -1,0 +1,117 @@
+package com.bsat_dummy.bsatnewen;
+import java.lang.*;
+
+/*
+rule "FirstRule"
+dialect "mvel"
+ruleflow-group "BSAT"
+when
+$A:Module(wcs_product.equals("150") )
+then
+$A.setReward_or_bonus("500");
+end
+
+rule "SecondRule"
+dialect "mvel"
+ruleflow-group "BSAT"
+when
+$A:Module(wcs_product.equals("500") )
+then
+$A.setReward_or_bonus("2000");
+end
+
+rule "ThirdRule"
+dialect "mvel"
+ruleflow-group "BSAT"
+when
+$B:Module(qualified_dealers.equals("3") )
+then
+$B.setReward_or_bonus("1000");
+end
+
+rule "FourthRule"
+dialect "mvel"
+ruleflow-group "BSAT"
+when
+$C:Module(qualified_dealers.equals("6") )
+then
+$C.setReward_or_bonus("2000");
+end
+
+
+
+rule "FifthRule"
+dialect "mvel"
+ruleflow-group "BSAT"
+when
+$D:Module(qualified_dealers.equals("2") )
+then
+$D.setReward_or_bonus("1500");
+end
+
+rule "SixthRule"
+dialect "mvel"
+ruleflow-group "BSAT"
+when
+$E:Module(qualified_dealers.equals("4") )
+then
+$E.setReward_or_bonus("3000");
+end
+*/
+
+
+rule "FirstRule"
+dialect "mvel"
+//ruleflow-group "BSAT"
+when
+$Z:Module($C:wcs_product, $C==150 )
+then
+$Z.setReward_or_bonus("500");
+end
+
+rule "SecondRule"
+dialect "mvel"
+//ruleflow-group "BSAT"
+when
+$A:Module($H:wcs_product, $H==500 )
+then
+$A.setReward_or_bonus("2000");
+end
+
+rule "ThirdRule"
+dialect "mvel"
+//ruleflow-group "BSAT"
+when
+$B:Module($X:qualified_dealers , $X==3 )
+then
+$B.setReward_or_bonus("1000");
+end
+
+rule "FourthRule"
+dialect "mvel"
+//ruleflow-group "BSAT"
+when
+$C:Module($Y:qualified_dealers , $Y==6 )
+then
+$C.setReward_or_bonus("2000");
+end
+
+
+
+rule "FifthRule"
+dialect "mvel"
+//ruleflow-group "BSAT"
+when
+$D:Module($M:qualified_TSI , $M==2 )
+then
+$D.setReward_or_bonus("1500");
+end
+
+rule "SixthRule"
+dialect "mvel"
+//ruleflow-group "BSAT"
+when
+$E:Module($N:qualified_TSI , $N==4 )
+then
+$E.setReward_or_bonus("3000");
+end
